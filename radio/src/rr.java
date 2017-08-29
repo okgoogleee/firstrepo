@@ -31,7 +31,6 @@ public class rr extends javax.swing.JFrame {
         r1 = new javax.swing.JRadioButton();
         r2 = new javax.swing.JRadioButton();
         t1 = new javax.swing.JTextField();
-        b1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -60,13 +59,6 @@ public class rr extends javax.swing.JFrame {
             }
         });
 
-        b1.setText("get");
-        b1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                b1ActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -78,10 +70,8 @@ public class rr extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(r1)
                         .addGap(75, 75, 75)
-                        .addComponent(r2)
-                        .addGap(28, 28, 28)
-                        .addComponent(b1)))
-                .addContainerGap(54, Short.MAX_VALUE))
+                        .addComponent(r2)))
+                .addContainerGap(131, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -89,8 +79,7 @@ public class rr extends javax.swing.JFrame {
                 .addGap(74, 74, 74)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(r2)
-                    .addComponent(r1)
-                    .addComponent(b1))
+                    .addComponent(r1))
                 .addGap(18, 18, 18)
                 .addComponent(t1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(125, Short.MAX_VALUE))
@@ -107,26 +96,12 @@ public class rr extends javax.swing.JFrame {
 
     private void r1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_r1ActionPerformed
       
-        r1.setText("male");
+        t1.setText("male");
     }//GEN-LAST:event_r1ActionPerformed
 
     private void r2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_r2ActionPerformed
-         r2.setText("Female");
+         t1.setText("Female");
     }//GEN-LAST:event_r2ActionPerformed
-
-    private void b1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b1ActionPerformed
-        if(r1.isSelected())
-        {
-            String s1=r1.getText();
-            t1.setText(s1);
-        }
-        else if(r2.isSelected())
-        {
-            String s2=r2.getText();
-            t1.setText(s2);
-        }
-       
-    }//GEN-LAST:event_b1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -164,7 +139,6 @@ public class rr extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton b1;
     private javax.swing.ButtonGroup bg;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JRadioButton r1;
